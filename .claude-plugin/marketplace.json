@@ -1,0 +1,12 @@
+{
+  "name": "normolo",
+  "description": "Normolo's Claude Code plugins",
+  "owner": { "name": "Normolo" },
+  "plugins": [
+    {
+      "name": "design-language",
+      "source": "./plugins/design-language",
+      "description": "Shared design language for cashflow and homelab-dashboard: tokens, rules, sync and review skills, and an after-edit check."
+    }
+  ]
+}

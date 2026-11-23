@@ -1,0 +1,144 @@
+/* ==== design-system tokens v1.0.0 -- copied from Normolo/design-system, do not edit here ====
+   Change a token in the design-system repo, then run /design-language:design-sync
+   in this app (or: node design/sync.js --from <new tokens.css>). Tests fail if
+   this block differs from design/tokens.css. */
+:root {
+  color-scheme: dark;
+
+  /* Surfaces: page, chrome (top bar, table heads, code), card, card that alerts */
+  --ds-bg:           #0f1117;
+  --ds-surface:      #1a1d27;
+  --ds-card:         #21253a;
+  --ds-card-alert:   #2b3050;
+  --ds-border:       #2e3350;
+
+  /* Text */
+  --ds-text:         #e2e6f0;
+  --ds-muted:        #7b82a0;
+  --ds-faint:        #5b6178;
+
+  /* Brand */
+  --ds-accent:       #5b8def;
+  --ds-accent-2:     #7c6af7;
+  --ds-accent-tint:  rgba(91, 141, 239, 0.14);
+
+  /* Status: one colour per meaning, and exactly one green */
+  --ds-good:         #5fd88f;
+  --ds-warn:         #e8893a;
+  --ds-bad:          #ff6666;
+  --ds-good-bg:      #12261c;
+  --ds-warn-bg:      rgba(232, 137, 58, 0.18);
+  --ds-bad-bg:       rgba(255, 102, 102, 0.18);
+  --ds-good-border:  #24462f;
+  --ds-warn-border:  rgba(232, 137, 58, 0.40);
+  --ds-bad-border:   rgba(255, 102, 102, 0.36);
+  --ds-offline-bg:   rgba(123, 130, 160, 0.14);
+
+  /* Categorical data colours (charts, tags), beyond accent/accent-2/good/warn */
+  --ds-yellow:       #f0b429;
+  --ds-cyan:         #06b6d4;
+
+  /* Pill text on a ~13% tint of the same hue (AA against the tint) */
+  --ds-pill-green:   #5fd88f;
+  --ds-pill-blue:    #749ef1;
+  --ds-pill-yellow:  #f0b429;
+  --ds-pill-cyan:    #06b6d4;
+  --ds-pill-purple:  #9d8ff9;
+  --ds-pill-gray:    #989db5;
+
+  /* Type */
+  --ds-font:      ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --ds-font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --ds-fs-2xs: 11px;
+  --ds-fs-xs:  12px;
+  --ds-fs-sm:  13px;
+  --ds-fs-base: 14px;
+  --ds-fs-md:  15px;
+  --ds-fs-lg:  16px;
+  --ds-fs-xl:  22px;
+
+  /* Shape, space, motion */
+  --ds-radius-xs:   4px;
+  --ds-radius-sm:   6px;
+  --ds-radius:      10px;
+  --ds-radius-pill: 999px;
+  --ds-space-1: 4px;
+  --ds-space-2: 8px;
+  --ds-space-3: 12px;
+  --ds-space-4: 16px;
+  --ds-space-5: 20px;
+  --ds-space-6: 24px;
+  --ds-space-8: 32px;
+  --ds-nav-height: 52px;
+  --ds-ease: 0.15s ease;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --ds-bg:           #f4f6fb;
+  --ds-surface:      #ffffff;
+  --ds-card:         #eef0f8;
+  --ds-card-alert:   #dee1ef;
+  --ds-border:       #d0d5e8;
+  --ds-text:         #1a1d2e;
+  --ds-muted:        #5a6070;
+  --ds-faint:        #888d9a;
+  --ds-accent:       #396bcc;
+  --ds-accent-2:     #6254d4;
+  --ds-accent-tint:  rgba(57, 107, 204, 0.14);
+  --ds-good:         #147c53;
+  --ds-warn:         #b5491a;
+  --ds-bad:          #d02e24;
+  --ds-good-bg:      rgba(20, 124, 83, 0.16);
+  --ds-warn-bg:      rgba(181, 73, 26, 0.18);
+  --ds-bad-bg:       rgba(208, 46, 36, 0.18);
+  --ds-good-border:  rgba(20, 124, 83, 0.38);
+  --ds-warn-border:  rgba(181, 73, 26, 0.40);
+  --ds-bad-border:   rgba(208, 46, 36, 0.36);
+  --ds-offline-bg:   rgba(90, 96, 112, 0.14);
+  --ds-yellow:       #90660d;
+  --ds-cyan:         #04798d;
+  --ds-pill-green:   #13754e;
+  --ds-pill-blue:    #335fb6;
+  --ds-pill-yellow:  #865f0c;
+  --ds-pill-cyan:    #046c7e;
+  --ds-pill-purple:  #5c4fc7;
+  --ds-pill-gray:    #5a6070;
+}
+
+/* No data-theme on <html> means "follow the OS": same values as above. */
+@media (prefers-color-scheme: light) {
+  html:not([data-theme]) {
+    color-scheme: light;
+    --ds-bg:           #f4f6fb;
+    --ds-surface:      #ffffff;
+    --ds-card:         #eef0f8;
+    --ds-card-alert:   #dee1ef;
+    --ds-border:       #d0d5e8;
+    --ds-text:         #1a1d2e;
+    --ds-muted:        #5a6070;
+    --ds-faint:        #888d9a;
+    --ds-accent:       #396bcc;
+    --ds-accent-2:     #6254d4;
+    --ds-accent-tint:  rgba(57, 107, 204, 0.14);
+    --ds-good:         #147c53;
+    --ds-warn:         #b5491a;
+    --ds-bad:          #d02e24;
+    --ds-good-bg:      rgba(20, 124, 83, 0.16);
+    --ds-warn-bg:      rgba(181, 73, 26, 0.18);
+    --ds-bad-bg:       rgba(208, 46, 36, 0.18);
+    --ds-good-border:  rgba(20, 124, 83, 0.38);
+    --ds-warn-border:  rgba(181, 73, 26, 0.40);
+    --ds-bad-border:   rgba(208, 46, 36, 0.36);
+    --ds-offline-bg:   rgba(90, 96, 112, 0.14);
+    --ds-yellow:       #90660d;
+    --ds-cyan:         #04798d;
+    --ds-pill-green:   #13754e;
+    --ds-pill-blue:    #335fb6;
+    --ds-pill-yellow:  #865f0c;
+    --ds-pill-cyan:    #046c7e;
+    --ds-pill-purple:  #5c4fc7;
+    --ds-pill-gray:    #5a6070;
+  }
+}
+/* ==== end design-system tokens ==== */

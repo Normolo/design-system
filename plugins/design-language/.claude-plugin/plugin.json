@@ -1,0 +1,6 @@
+{
+  "name": "design-language",
+  "version": "1.0.0",
+  "description": "Normolo's shared design language: tokens, rules and components for cashflow and homelab-dashboard, a sync skill, a review skill, and a check after every edit.",
+  "author": { "name": "Normolo" }
+}
